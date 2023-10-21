@@ -28,3 +28,12 @@ func _process(_delta):
 
 func _on_go_button_pressed(actionQueue):
 	activate_moves.emit()
+
+
+func _on_player_share_action_queue(actionQueue, adding):
+	if adding == true:
+		$QueueItemList.add_item(actionQueue.back())
+	else:
+		$QueueItemList.remove_item(0)	
+	
+		

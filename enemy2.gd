@@ -6,6 +6,8 @@ var enemy_move_toggle = false
 var enemy_turn_left_toggle = false
 var enemy_turn_right_toggle = false
 
+var player_killed = false
+
 var direction = 1
 
 var random = RandomNumberGenerator.new()
@@ -35,10 +37,10 @@ func _process(delta):
 		
 	
 func handle_collision():
-	if position.y + 50 >= player.position.y and position.y - 50 <= player.position.y and position.x + 50 >= player.position.x and position.x - 50 <= player.position.x:
-		print('dead')
-		queue_free()
-		hit.emit()
+	if player_killed == false:
+		if position.y + 50 >= player.position.y and position.y - 50 <= player.position.y and position.x + 50 >= player.position.x and position.x - 50 <= player.position.x:
+			print('dead')
+			hit.emit()
 
 
 

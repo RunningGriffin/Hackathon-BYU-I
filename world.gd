@@ -14,10 +14,12 @@ func _process(delta):
 
 
 func _on_enemy_hit():
+	await get_tree().create_timer(1).timeout
 	$GameOverScreen.show()
 
 
 func _on_enemy_2_hit():
+	await get_tree().create_timer(1).timeout
 	$GameOverScreen.show()
 
 func _on_player_win():
