@@ -4,6 +4,7 @@ const SPEED = 400
 const RADIANS = PI /2
 var screen_size: Vector2
 var coins: int
+signal win
 
 var action_move_toggle = false
 var action_turn_left_toggle = false
@@ -70,4 +71,7 @@ func _on_player_turn_right():
 	
 func getCoin():
 	coins += 1
+	print(coins)
+	if coins == 3:
+		win.emit()
 
