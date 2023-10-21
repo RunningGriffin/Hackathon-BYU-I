@@ -17,3 +17,5 @@ func _on_enemy_hit():
 
 func _on_enemy_2_hit():
 	$GameOverScreen.show()
+
+	

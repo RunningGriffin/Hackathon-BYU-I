@@ -5,6 +5,8 @@ signal player_move
 signal player_turn_left
 signal player_turn_right
 
+signal activate_moves
+
 
 func _on_item_activated(index):
 	player_action.emit()
@@ -22,3 +24,7 @@ func _on_item_activated(index):
 func _process(_delta):
 	pass
 
+
+
+func _on_go_button_pressed(actionQueue):
+	activate_moves.emit()
