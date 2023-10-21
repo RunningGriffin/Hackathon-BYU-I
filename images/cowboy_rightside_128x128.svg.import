@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b3iih302jkct7"
-path="res://.godot/imported/cowboy.png-9b53d7047d70216c712a6e88dbe7773a.ctex"
+uid="uid://dxy0u5iw0wr7k"
+path="res://.godot/imported/cowboy_rightside_128x128.svg-6ec8b1818faa0484781379a847a79f1b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://images/cowboy.png"
-dest_files=["res://.godot/imported/cowboy.png-9b53d7047d70216c712a6e88dbe7773a.ctex"]
+source_file="res://images/cowboy_rightside_128x128.svg"
+dest_files=["res://.godot/imported/cowboy_rightside_128x128.svg-6ec8b1818faa0484781379a847a79f1b.ctex"]
 
 [params]
 
@@ -32,3 +32,6 @@ process/hdr_as_srgb=false
 process/hdr_clamp_exposure=false
 process/size_limit=0
 detect_3d/compress_to=1
+svg/scale=1.0
+editor/scale_with_editor_scale=false
+editor/convert_colors_with_editor_theme=false

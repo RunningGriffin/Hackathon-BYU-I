@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b33j6slnyn56b"
-path="res://.godot/imported/cowboy_rightside.png-13d9d855b48f1970d2fa086ffc1d6735.ctex"
+uid="uid://bwtdsg3lbqkie"
+path="res://.godot/imported/options.png-b7cb84cd8352dd9d0f68a8f0481cbd3f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://images/cowboy_rightside.png"
-dest_files=["res://.godot/imported/cowboy_rightside.png-13d9d855b48f1970d2fa086ffc1d6735.ctex"]
+source_file="res://images/options.png"
+dest_files=["res://.godot/imported/options.png-b7cb84cd8352dd9d0f68a8f0481cbd3f.ctex"]
 
 [params]
 

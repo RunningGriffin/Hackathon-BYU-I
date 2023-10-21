@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cvmh0c550tpog"
-path="res://.godot/imported/tile_map_64x64.svg-4d363ef5a30beab9e338990d30a27352.ctex"
+uid="uid://yg6ock4h4o2k"
+path="res://.godot/imported/Quit.png-445a1d3c0adfa1c010d7fcb38a3c79e6.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://images/tile_map_64x64.svg"
-dest_files=["res://.godot/imported/tile_map_64x64.svg-4d363ef5a30beab9e338990d30a27352.ctex"]
+source_file="res://images/Quit.png"
+dest_files=["res://.godot/imported/Quit.png-445a1d3c0adfa1c010d7fcb38a3c79e6.ctex"]
 
 [params]
 
@@ -32,6 +32,3 @@ process/hdr_as_srgb=false
 process/hdr_clamp_exposure=false
 process/size_limit=0
 detect_3d/compress_to=1
-svg/scale=1.0
-editor/scale_with_editor_scale=false
-editor/convert_colors_with_editor_theme=false
