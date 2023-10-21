@@ -3,6 +3,7 @@ extends Area2D
 const SPEED = 400
 const RADIANS = PI /2
 var screen_size: Vector2
+var coins: int
 
 var action_move_toggle = false
 var action_turn_left_toggle = false
@@ -15,6 +16,8 @@ func _ready():
 	screen_size.x = 1150
 	screen_size.y = 650
 	$AnimatedSprite2D.play()
+	coins = 0
+	name = "player"
 	
 
 func _physics_process(delta):
@@ -70,3 +73,6 @@ func _physics_process(delta):
 		
 	position += velocity * delta
 	position = position.clamp(Vector2.ZERO, screen_size)
+
+func getCoin():
+	coins += 1
