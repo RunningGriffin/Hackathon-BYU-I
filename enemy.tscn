@@ -1,4 +1,7 @@
-[gd_scene load_steps=8 format=3 uid="uid://dhsemf3j0mq31"]
+
+[gd_scene load_steps=8 format=3 uid="uid://b6gxe0lkqrt8m"]
+
+
 
 [ext_resource type="Script" path="res://Enemy.gd" id="1_yelbe"]
 [ext_resource type="Texture2D" uid="uid://dmccgyujswd3n" path="res://images/cobra_back_128x128.svg" id="2_5clqw"]
