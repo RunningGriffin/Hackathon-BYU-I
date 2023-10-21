@@ -75,7 +75,7 @@ func player_turn_right():
 func getCoin():
 	coins += 1
 	print(coins)
-	if coins == 3:
+	if coins == 1:
 		win.emit()
 
 

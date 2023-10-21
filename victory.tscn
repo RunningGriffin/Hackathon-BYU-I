@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://7adhcu4y2j8q"]
+[gd_scene load_steps=8 format=3 uid="uid://bdyedljtq2ltf"]
 
 [ext_resource type="Script" path="res://victory.gd" id="1_vvf3y"]
 [ext_resource type="FontFile" uid="uid://cwcmqnkjbp28c" path="res://font/Godot-Fontpack-master/fonts/architect-s-daughter/ArchitectsDaughter.ttf" id="2_6ok3l"]
@@ -114,7 +114,6 @@ grow_horizontal = 2
 text = "Score:"
 label_settings = SubResource("LabelSettings_p8l23")
 
-[connection signal="pressed" from="Panel/NextLevelButton" to="." method="_on_restart_button_pressed"]
 [connection signal="pressed" from="Panel/NextLevelButton" to="." method="_on_next_level_button_pressed"]
-[connection signal="pressed" from="Panel/ReplayButton" to="." method="_on_menu_button_pressed"]
 [connection signal="pressed" from="Panel/ReplayButton" to="." method="_on_replay_button_pressed"]
+[connection signal="pressed" from="Panel/ReplayButton" to="." method="_on_menu_button_pressed"]

@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://cpskj7ryuoaeq"]
+[gd_scene load_steps=10 format=3 uid="uid://cpskj7ryuoaeq"]
 
 [ext_resource type="PackedScene" uid="uid://dcbkq2ko4hnrq" path="res://player.tscn" id="1_8hw71"]
 [ext_resource type="Script" path="res://world.gd" id="1_ps516"]
@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://c85tgs1l0pydn" path="res://coin.tscn" id="6_cpruv"]
 [ext_resource type="PackedScene" uid="uid://dujtvgf5x7fa4" path="res://gameover.tscn" id="6_tnsj5"]
 [ext_resource type="Script" path="res://enemy2.gd" id="7_xsxmy"]
+[ext_resource type="PackedScene" uid="uid://bdyedljtq2ltf" path="res://victory.tscn" id="9_la8ka"]
 
 [node name="World" type="Node"]
 script = ExtResource("1_ps516")
@@ -42,6 +43,8 @@ position = Vector2(200, 250)
 script = ExtResource("7_xsxmy")
 
 [node name="GameOverScreen" parent="." instance=ExtResource("6_tnsj5")]
+
+[node name="victoryScreen" parent="." instance=ExtResource("9_la8ka")]
 
 [connection signal="enemy_move" from="TileMap/Player" to="TileMap/Enemy" method="_on_player_enemy_move"]
 [connection signal="enemy_move" from="TileMap/Player" to="TileMap/Enemy2" method="_on_player_enemy_move"]
