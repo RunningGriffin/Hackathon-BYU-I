@@ -7,6 +7,9 @@ var coins: int
 signal win
 signal enemy_move
 
+var turns = 0
+var actionQueue = []
+
 var action_move_toggle = false
 var action_turn_left_toggle = false
 var action_turn_right_toggle = false
@@ -28,7 +31,7 @@ func _physics_process(delta):
 
 
 
-func on_player_move():
+func player_move():
 	turns += 1
 	if direction == 0:
 		$AnimatedSprite2D.animation = 'back'
@@ -44,7 +47,7 @@ func on_player_move():
 		position.x += 50
 
 
-func _on_player_turn_left():
+func player_turn_left():
 	if direction == 3:
 		direction = 0
 	else:
@@ -59,7 +62,7 @@ func _on_player_turn_left():
 		$AnimatedSprite2D.animation = 'right'
 
 
-func _on_player_turn_right():
+func player_turn_right():
 	if direction == 0:
 		direction = 3
 	else:
@@ -77,7 +80,7 @@ func _on_player_turn_right():
 func getCoin():
 	coins += 1
 	print(coins)
-	if coins == 3:
+	if coins == 1:
 		win.emit()
 
 
