@@ -28,5 +28,6 @@ item_0/text = "Move"
 item_1/text = "Turn Left"
 item_2/text = "Turn Right"
 
+[connection signal="item_activated" from="QueueItemList" to="." method="_on_queue_item_list_item_activated"]
 [connection signal="pressed" from="GoButton" to="." method="_on_go_button_pressed" binds= [[]]]
 [connection signal="item_activated" from="possibleActionsItemList" to="." method="_on_item_activated"]
