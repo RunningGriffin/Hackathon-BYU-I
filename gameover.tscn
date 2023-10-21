@@ -68,14 +68,32 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -157.5
-offset_top = 42.5
-offset_right = 159.5
-offset_bottom = 116.5
+offset_left = -159.5
+offset_top = 62.5
+offset_right = 157.5
+offset_bottom = 136.5
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_fonts/font = ExtResource("3_a6f3q")
 theme_override_font_sizes/font_size = 56
 text = "Retry"
 
+[node name="MenuButton" type="Button" parent="Panel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -4.0
+offset_top = -4.0
+offset_right = 4.0
+offset_bottom = 4.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("3_a6f3q")
+theme_override_font_sizes/font_size = 40
+text = "Main Menu"
+
 [connection signal="pressed" from="Panel/RestartButton" to="." method="_on_restart_button_pressed"]
+[connection signal="pressed" from="Panel/MenuButton" to="." method="_on_menu_button_pressed"]

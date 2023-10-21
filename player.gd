@@ -2,7 +2,7 @@ extends Area2D
 
 const SPEED = 400
 const RADIANS = PI /2
-var screen_size
+var screen_size: Vector2
 
 var action_move_toggle = false
 var action_turn_left_toggle = false
@@ -12,7 +12,8 @@ var action_turn_right_toggle = false
 var direction = 3
 
 func _ready():
-	screen_size = get_viewport_rect().size
+	screen_size.x = 1150
+	screen_size.y = 650
 	$AnimatedSprite2D.play()
 	
 
@@ -28,16 +29,16 @@ func _physics_process(delta):
 	if action_move_toggle: 
 		if direction == 0:
 			$AnimatedSprite2D.animation = 'back'
-			position.y -= 100
+			position.y -= 50
 		elif direction == 1:
 			$AnimatedSprite2D.animation = 'left'
-			position.x -= 100
+			position.x -= 50
 		elif direction == 2:
 			$AnimatedSprite2D.animation = 'front'
-			position.y += 100
+			position.y += 50
 		elif direction == 3:
 			$AnimatedSprite2D.animation = 'right'
-			position.x += 100
+			position.x += 50
 			
 	if action_turn_left_toggle:
 		if direction == 3:
