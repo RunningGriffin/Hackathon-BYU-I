@@ -4,8 +4,8 @@ const SPEED = 400
 const RADIANS = PI /2
 var screen_size: Vector2
 var coins: int
-var turns: int
 signal win
+signal enemy_move
 
 var action_move_toggle = false
 var action_turn_left_toggle = false
@@ -25,7 +25,10 @@ func _physics_process(delta):
 	position = position.clamp(Vector2.ZERO, screen_size)
 
 
-func _on_player_move():
+
+
+
+func on_player_move():
 	turns += 1
 	if direction == 0:
 		$AnimatedSprite2D.animation = 'back'
@@ -76,4 +79,45 @@ func getCoin():
 	print(coins)
 	if coins == 3:
 		win.emit()
+
+
+
+func _on_player_move():
+	actionQueue.append("move")
+	
+
+func _on_player_turn_left():
+	actionQueue.append("turn left")
+
+
+func _on_player_turn_right():
+	actionQueue.append("turn right")
+		
+		
+func _on_activate_moves():
+	while len(actionQueue) != 0:
+		enemy_move.emit()
+		var current_action = actionQueue.pop_front()
+		print(current_action)
+		
+		match current_action:
+			"move": # Move
+				player_move()
+			
+			"turn left": # Turn Left
+				player_turn_left()
+			
+			"turn right": # Turn Right
+				player_turn_right()
+				
+		
+		await get_tree().create_timer(0.5).timeout
+		
+	print("All actions done \n\n")
+	
+	
+
+
+func _on_move_delay_timer_timeout():
+	pass
 

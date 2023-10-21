@@ -42,10 +42,7 @@ func handle_collision():
 
 
 
-func _on_actions_interface_player_action():
-
-	# handle player movement and rotation
-	
+func _on_player_enemy_move():
 	if list[0] == 2: 
 		if direction == 0:
 			$AnimatedSprite2D.animation = 'back'
@@ -95,5 +92,3 @@ func _on_actions_interface_player_action():
 	enemy_move_toggle = false
 	enemy_turn_left_toggle = false
 	enemy_turn_right_toggle = false
-
-
