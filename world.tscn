@@ -16,6 +16,9 @@
 [node name="World" type="Node"]
 script = ExtResource("1_ps516")
 
+[node name="MoveDelayTimer" type="Timer" parent="."]
+wait_time = 0.5
+
 [node name="TileMap" parent="." instance=ExtResource("2_bvqsw")]
 
 [node name="Player" parent="TileMap" instance=ExtResource("1_8hw71")]
@@ -44,7 +47,12 @@ script = ExtResource("7_xsxmy")
 
 [node name="GameOverScreen" parent="." instance=ExtResource("6_tnsj5")]
 
+
 [node name="victoryScreen" parent="." instance=ExtResource("8_hin57")]
+
+
+
+[connection signal="activate_moves" from="TileMap/actionsInterface" to="TileMap/Player" method="_on_activate_moves"]
 
 [connection signal="win" from="TileMap/Player" to="." method="_on_player_win"]
 [connection signal="player_action" from="TileMap/actionsInterface" to="TileMap/Enemy" method="_on_player_action"]

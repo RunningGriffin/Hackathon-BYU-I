@@ -1,5 +1,6 @@
 
-[gd_scene load_steps=8 format=3 uid="uid://ofsykiave038"]
+[gd_scene load_steps=8 format=3 uid="uid://b6gxe0lkqrt8m"]
+
 
 
 [ext_resource type="Script" path="res://Enemy.gd" id="1_yelbe"]
