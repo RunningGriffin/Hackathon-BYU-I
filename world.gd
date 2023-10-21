@@ -21,5 +21,6 @@ func _on_enemy_2_hit():
 	$GameOverScreen.show()
 
 func _on_player_win():
-	get_tree().change_scene_to_file("res://victory.tscn")
+	$victoryScreen.setValues()
+	$victoryScreen.show()
 
