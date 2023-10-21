@@ -4,6 +4,7 @@ const SPEED = 400
 const RADIANS = PI /2
 var screen_size: Vector2
 var coins: int
+var turns: int
 signal win
 
 var action_move_toggle = false
@@ -25,6 +26,7 @@ func _physics_process(delta):
 
 
 func _on_player_move():
+	turns += 1
 	if direction == 0:
 		$AnimatedSprite2D.animation = 'back'
 		position.y -= 50

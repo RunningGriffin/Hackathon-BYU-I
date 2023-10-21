@@ -16,6 +16,7 @@ font = ExtResource("2_6ok3l")
 font_size = 96
 
 [sub_resource type="SystemFont" id="SystemFont_18pka"]
+subpixel_positioning = 0
 
 [sub_resource type="LabelSettings" id="LabelSettings_p8l23"]
 font = SubResource("SystemFont_18pka")
@@ -54,7 +55,7 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_puij2")
 
-[node name="Label" type="Label" parent="Panel"]
+[node name="Victory" type="Label" parent="Panel"]
 layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
@@ -101,17 +102,30 @@ theme_override_fonts/font = ExtResource("3_42o2o")
 theme_override_font_sizes/font_size = 40
 text = "Replay"
 
-[node name="Label2" type="Label" parent="Panel"]
+[node name="Score" type="Label" parent="Panel"]
 layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = -190.5
-offset_top = 162.0
-offset_right = 103.5
-offset_bottom = 249.0
+offset_left = -291.5
+offset_top = 134.0
+offset_right = 2.5
+offset_bottom = 221.0
 grow_horizontal = 2
 text = "Score:"
+label_settings = SubResource("LabelSettings_p8l23")
+
+[node name="Turns" type="Label" parent="Panel"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -296.5
+offset_top = 192.0
+offset_right = -2.5
+offset_bottom = 279.0
+grow_horizontal = 2
+text = "Turns:"
 label_settings = SubResource("LabelSettings_p8l23")
 
 [connection signal="pressed" from="Panel/NextLevelButton" to="." method="_on_restart_button_pressed"]
