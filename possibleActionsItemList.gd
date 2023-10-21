@@ -24,7 +24,6 @@ func _on_item_activated(index):
 func _process(_delta):
 	pass
 
-
-
 func _on_go_button_pressed(actionQueue):
 	activate_moves.emit()
+
