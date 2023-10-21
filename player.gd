@@ -11,8 +11,6 @@ var action_move_toggle = false
 var action_turn_left_toggle = false
 var action_turn_right_toggle = false
 
-var actionQueue = [] # Actions will be added to this before they are used
-
 #used to map rotaion
 var direction = 3
 
@@ -27,7 +25,11 @@ func _physics_process(delta):
 	position = position.clamp(Vector2.ZERO, screen_size)
 
 
-func player_move():
+
+
+
+func on_player_move():
+	turns += 1
 	if direction == 0:
 		$AnimatedSprite2D.animation = 'back'
 		position.y -= 50
@@ -42,7 +44,7 @@ func player_move():
 		position.x += 50
 
 
-func player_turn_left():
+func _on_player_turn_left():
 	if direction == 3:
 		direction = 0
 	else:
@@ -57,7 +59,7 @@ func player_turn_left():
 		$AnimatedSprite2D.animation = 'right'
 
 
-func player_turn_right():
+func _on_player_turn_right():
 	if direction == 0:
 		direction = 3
 	else:
@@ -77,6 +79,7 @@ func getCoin():
 	print(coins)
 	if coins == 3:
 		win.emit()
+
 
 
 func _on_player_move():
@@ -117,3 +120,4 @@ func _on_activate_moves():
 
 func _on_move_delay_timer_timeout():
 	pass
+
