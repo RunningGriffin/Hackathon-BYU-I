@@ -12,7 +12,7 @@ var random = RandomNumberGenerator.new()
 
 var screen_size
 
-var list : Array = [2,2,3,2,2,1,2,1,2,2,2,2,1,2,1,2,3,2,2,1,2,1,2,2,3,2,2,1,2,1,2,2,2,2,1,2,1,2,3,2,2,1,2,1,2,2,3,2,2,1,2,1,2,2,2,2,1,2,1,2,3,2,2,1,2,1]
+var list : Array = [1,2,2,2,1,2,1,2,2,3,2,2,3,2,1,2,1,2,2,1,2,2,2,2,1,2,2,2,1,2,1,2,2,3,2,2,3,2,1,2,1,2,2,1,2,2,2,2,1,2,2,2,1,2,1,2,2,3,2,2,3,2,1,2,1,2,2,1,2,2,2,2]
 
 @onready var player = $"../Player"
 
@@ -32,7 +32,7 @@ func _process(delta):
 	enemy_move_toggle = false
 	enemy_turn_left_toggle = false
 	enemy_turn_right_toggle = false
-	
+		
 	
 func handle_collision():
 	if position.y + 50 >= player.position.y and position.y - 50 <= player.position.y and position.x + 50 >= player.position.x and position.x - 50 <= player.position.x:
@@ -41,7 +41,9 @@ func handle_collision():
 		hit.emit()
 
 
-func _on_player_action():
+
+func _on_actions_interface_player_action():
+
 	# handle player movement and rotation
 	
 	if list[0] == 2: 
