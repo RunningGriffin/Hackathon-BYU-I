@@ -1,8 +1,9 @@
-[gd_scene load_steps=10 format=3 uid="uid://cpskj7ryuoaeq"]
+[gd_scene load_steps=11 format=3 uid="uid://cpskj7ryuoaeq"]
 
 [ext_resource type="PackedScene" uid="uid://dcbkq2ko4hnrq" path="res://player.tscn" id="1_8hw71"]
 [ext_resource type="Script" path="res://world.gd" id="1_ps516"]
 [ext_resource type="PackedScene" uid="uid://clbtedsudd8l4" path="res://tile_map.tscn" id="2_bvqsw"]
+[ext_resource type="PackedScene" uid="uid://ckccva77muhrv" path="res://arnold.tscn" id="3_sedkd"]
 [ext_resource type="PackedScene" uid="uid://dfbh1fpc80s2l" path="res://actionsInterface.tscn" id="4_8s40o"]
 [ext_resource type="PackedScene" uid="uid://ofsykiave038" path="res://enemy.tscn" id="5_c2q0w"]
 [ext_resource type="PackedScene" uid="uid://c85tgs1l0pydn" path="res://coin.tscn" id="6_cpruv"]
@@ -17,6 +18,9 @@ script = ExtResource("1_ps516")
 wait_time = 0.5
 
 [node name="TileMap" parent="." instance=ExtResource("2_bvqsw")]
+
+[node name="arnold" parent="TileMap" instance=ExtResource("3_sedkd")]
+position = Vector2(950, 200)
 
 [node name="Player" parent="TileMap" instance=ExtResource("1_8hw71")]
 position = Vector2(100, 100)

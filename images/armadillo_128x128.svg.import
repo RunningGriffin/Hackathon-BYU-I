@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bfscc6tun50fg"
-path="res://.godot/imported/armilldillo_128x128.svg-f318f59e3b2c6f5a528fa37ad67b47a9.ctex"
+path="res://.godot/imported/armadillo_128x128.svg-3ac38f1717771439d33691eb2250857d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://images/armilldillo_128x128.svg"
-dest_files=["res://.godot/imported/armilldillo_128x128.svg-f318f59e3b2c6f5a528fa37ad67b47a9.ctex"]
+source_file="res://images/armadillo_128x128.svg"
+dest_files=["res://.godot/imported/armadillo_128x128.svg-3ac38f1717771439d33691eb2250857d.ctex"]
 
 [params]
 

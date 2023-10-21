@@ -50,6 +50,7 @@ script = ExtResource("1_yelbe")
 metadata/_edit_group_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+scale = Vector2(0.8, 0.8)
 shape = SubResource("RectangleShape2D_6enw3")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]

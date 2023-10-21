@@ -80,9 +80,10 @@ func player_turn_right():
 func getCoin():
 	coins += 1
 	print(coins)
-	if coins == 1:
-		win.emit()
 
+
+func getArnold():
+	win.emit()
 
 
 func _on_player_move():
