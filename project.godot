@@ -11,9 +11,13 @@ config_version=5
 [application]
 
 config/name="Hackathon BYU-I"
-run/main_scene="res://player.tscn"
+run/main_scene="res://world.tscn"
 config/features=PackedStringArray("4.1", "Mobile")
 config/icon="res://icon.svg"
+
+[display]
+
+window/size/mode=2
 
 [input]
 
