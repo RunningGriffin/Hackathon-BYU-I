@@ -11,10 +11,10 @@ var action_turn_right_toggle = false
 #used to map rotaion
 var direction = 3
 
-
 func _ready():
 	screen_size = get_viewport_rect().size
 	$AnimatedSprite2D.play()
+	
 
 func _physics_process(delta):
 	
