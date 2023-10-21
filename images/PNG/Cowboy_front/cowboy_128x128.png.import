@@ -2,17 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-
-uid="uid://cr5yvsx172vxl"
-path="res://.godot/imported/armilldillo_128x128.png-5fa115e8966ea318ac694ba968bb75d2.ctex"
+uid="uid://drjstlhaf00ev"
+path="res://.godot/imported/cowboy_128x128.png-6bea2beed65cdb6b02e9eb6cc9b73041.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://images/PNG/Arnold/armilldillo_128x128.png"
-dest_files=["res://.godot/imported/armilldillo_128x128.png-5fa115e8966ea318ac694ba968bb75d2.ctex"]
+source_file="res://images/PNG/Cowboy_front/cowboy_128x128.png"
+dest_files=["res://.godot/imported/cowboy_128x128.png-6bea2beed65cdb6b02e9eb6cc9b73041.ctex"]
 
 [params]
 

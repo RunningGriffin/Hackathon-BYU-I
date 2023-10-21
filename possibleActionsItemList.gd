@@ -6,6 +6,7 @@ signal player_turn_left
 signal player_turn_right
 
 signal activate_moves
+signal remove_action
 
 
 func _on_item_activated(index):
@@ -28,3 +29,18 @@ func _process(_delta):
 
 func _on_go_button_pressed(actionQueue):
 	activate_moves.emit()
+
+
+func _on_player_share_action_queue(actionQueue, adding):
+	if adding == true:
+		$QueueItemList.add_item(actionQueue.back())
+	else:
+		$QueueItemList.remove_item(0)	
+	
+		
+
+
+func _on_queue_item_list_item_activated(index):
+	remove_action.emit(index)
+	$QueueItemList.remove_item(index)
+	
