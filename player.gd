@@ -20,9 +20,9 @@ func _physics_process(delta):
 	
 	var velocity = Vector2.ZERO # The player's movement vector.
 	
-	action_move_toggle = get_parent().action_move_toggle
-	action_turn_left_toggle = get_parent().action_turn_left_toggle
-	action_turn_right_toggle = get_parent().action_turn_right_toggle
+	action_move_toggle = get_owner().action_move_toggle
+	action_turn_left_toggle = get_owner().action_turn_left_toggle
+	action_turn_right_toggle = get_owner().action_turn_right_toggle
 
 	# handle player movement and rotation
 	if action_move_toggle: 
