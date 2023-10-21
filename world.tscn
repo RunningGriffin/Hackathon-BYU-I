@@ -3,13 +3,13 @@
 [ext_resource type="PackedScene" uid="uid://dcbkq2ko4hnrq" path="res://player.tscn" id="1_8hw71"]
 [ext_resource type="Script" path="res://world.gd" id="1_ps516"]
 [ext_resource type="PackedScene" uid="uid://clbtedsudd8l4" path="res://tile_map.tscn" id="2_bvqsw"]
-[ext_resource type="PackedScene" uid="uid://ckccva77muhrv" path="res://arnold.tscn" id="3_sedkd"]
+[ext_resource type="PackedScene" path="res://arnold.tscn" id="3_sedkd"]
 [ext_resource type="PackedScene" uid="uid://dfbh1fpc80s2l" path="res://actionsInterface.tscn" id="4_8s40o"]
-[ext_resource type="PackedScene" uid="uid://ofsykiave038" path="res://enemy.tscn" id="5_c2q0w"]
-[ext_resource type="PackedScene" uid="uid://dgnqrrlbb15u3" path="res://coin.tscn" id="6_cpruv"]
-[ext_resource type="PackedScene" uid="uid://dujtvgf5x7fa4" path="res://gameover.tscn" id="6_tnsj5"]
+[ext_resource type="PackedScene" uid="uid://b6gxe0lkqrt8m" path="res://enemy.tscn" id="5_c2q0w"]
+[ext_resource type="PackedScene" path="res://coin.tscn" id="6_cpruv"]
+[ext_resource type="PackedScene" path="res://gameover.tscn" id="6_tnsj5"]
 [ext_resource type="Script" path="res://enemy2.gd" id="7_xsxmy"]
-[ext_resource type="PackedScene" uid="uid://bdyedljtq2ltf" path="res://victory.tscn" id="9_la8ka"]
+[ext_resource type="PackedScene" uid="uid://dc6b436teg6yl" path="res://victory.tscn" id="9_la8ka"]
 
 [node name="World" type="Node"]
 script = ExtResource("1_ps516")
