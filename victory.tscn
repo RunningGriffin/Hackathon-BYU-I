@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://dc6b436teg6yl"]
+[gd_scene load_steps=8 format=3 uid="uid://bdyedljtq2ltf"]
 
 [ext_resource type="Script" path="res://victory.gd" id="1_vvf3y"]
 [ext_resource type="FontFile" uid="uid://cwcmqnkjbp28c" path="res://font/Godot-Fontpack-master/fonts/architect-s-daughter/ArchitectsDaughter.ttf" id="2_6ok3l"]
@@ -102,7 +102,7 @@ theme_override_fonts/font = ExtResource("3_42o2o")
 theme_override_font_sizes/font_size = 40
 text = "Replay"
 
-[node name="Label2" type="Label" parent="Panel"]
+[node name="Score" type="Label" parent="Panel"]
 layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
@@ -129,5 +129,5 @@ text = "Turns:"
 label_settings = SubResource("LabelSettings_p8l23")
 
 [connection signal="pressed" from="Panel/NextLevelButton" to="." method="_on_next_level_button_pressed"]
-[connection signal="pressed" from="Panel/ReplayButton" to="." method="_on_menu_button_pressed"]
 [connection signal="pressed" from="Panel/ReplayButton" to="." method="_on_replay_button_pressed"]
+[connection signal="pressed" from="Panel/ReplayButton" to="." method="_on_menu_button_pressed"]

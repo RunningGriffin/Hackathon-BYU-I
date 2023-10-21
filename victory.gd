@@ -21,7 +21,5 @@ func setValues():
 	$Panel/Score.text = score % str(player.coins)
 	$Panel/Turns.text = turns % str(player.turns)
 
-# Show the player's score
-func print_results():
-	pass
+
 
