@@ -1,15 +1,40 @@
-[gd_scene load_steps=5 format=3 uid="uid://ckccva77muhrv"]
+[gd_scene load_steps=9 format=3 uid="uid://ckccva77muhrv"]
 
 [ext_resource type="Script" path="res://arnold.gd" id="1_quxl8"]
-[ext_resource type="Texture2D" uid="uid://bfscc6tun50fg" path="res://images/armadillo_128x128.svg" id="2_2g27b"]
+[ext_resource type="Texture2D" uid="uid://cr5yvsx172vxl" path="res://images/PNG/Arnold/armilldillo_128x128.png" id="2_rir0q"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5ubte"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_y1527"]
+atlas = ExtResource("2_rir0q")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1tdqt"]
+atlas = ExtResource("2_rir0q")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_82m0b"]
+atlas = ExtResource("2_rir0q")
+region = Rect2(0, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1v4uf"]
+atlas = ExtResource("2_rir0q")
+region = Rect2(32, 32, 32, 32)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_4wn7s"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("2_2g27b")
+"texture": SubResource("AtlasTexture_y1527")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1tdqt")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_82m0b")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1v4uf")
 }],
 "loop": true,
 "name": &"default",
@@ -24,5 +49,5 @@ scale = Vector2(2.5, 2.5)
 shape = SubResource("RectangleShape2D_5ubte")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-scale = Vector2(0.5, 0.5)
+scale = Vector2(2, 2)
 sprite_frames = SubResource("SpriteFrames_4wn7s")
