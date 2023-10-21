@@ -20,7 +20,7 @@ var direction = 3
 func _ready():
 	screen_size.x = 1150
 	screen_size.y = 650
-	$AnimatedSprite2D.play()
+	$AnimatedSprite2D.play("right")
 	coins = 0
 	
 
