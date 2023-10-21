@@ -21,4 +21,3 @@ func _on_item_activated(index):
 
 func _process(_delta):
 	pass
-
