@@ -41,8 +41,9 @@ func handle_collision():
 		hit.emit()
 
 
-func _on_player_ene_move():
-	
+
+func _on_actions_interface_player_action():
+
 	# handle player movement and rotation
 	
 	if list[0] == 2: 
@@ -94,4 +95,5 @@ func _on_player_ene_move():
 	enemy_move_toggle = false
 	enemy_turn_left_toggle = false
 	enemy_turn_right_toggle = false
+
 
