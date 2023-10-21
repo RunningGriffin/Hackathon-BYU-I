@@ -29,16 +29,16 @@ func _process(delta):
 		# handle player movement and rotation
 	if enemy_move_toggle: 
 		if direction == 0:
-#			$AnimatedSprite2D.animation = 'back'
+			$AnimatedSprite2D.animation = 'back'
 			position.y -= 100
 		elif direction == 1:
-#			$AnimatedSprite2D.animation = 'left'
+			$AnimatedSprite2D.animation = 'left'
 			position.x -= 100
 		elif direction == 2:
-#			$AnimatedSprite2D.animation = 'front'
+			$AnimatedSprite2D.animation = 'front'
 			position.y += 100
 		elif direction == 3:
-#			$AnimatedSprite2D.animation = 'right'
+			$AnimatedSprite2D.animation = 'right'
 			position.x += 100
 			
 	if enemy_turn_left_toggle:
@@ -46,28 +46,28 @@ func _process(delta):
 			direction = 0
 		else:
 			direction +=1
-#		if direction == 0:
-#			$AnimatedSprite2D.animation = 'back'
-#		elif direction == 1:
-#			$AnimatedSprite2D.animation = 'left'
-#		elif direction == 2:
-#			$AnimatedSprite2D.animation = 'front'
-#		elif direction == 3:
-#			$AnimatedSprite2D.animation = 'right'
+		if direction == 0:
+			$AnimatedSprite2D.animation = 'back'
+		elif direction == 1:
+			$AnimatedSprite2D.animation = 'left'
+		elif direction == 2:
+			$AnimatedSprite2D.animation = 'front'
+		elif direction == 3:
+			$AnimatedSprite2D.animation = 'right'
 			
 	if enemy_turn_right_toggle:
 		if direction == 0:
 			direction = 3
 		else:
 			direction -=1
-#		if direction == 0:
-#			$AnimatedSprite2D.animation = 'back'
-#		elif direction == 1:
-#			$AnimatedSprite2D.animation = 'left'
-#		elif direction == 2:
-#			$AnimatedSprite2D.animation = 'front'
-#		elif direction == 3:
-#			$AnimatedSprite2D.animation = 'right'
+		if direction == 0:
+			$AnimatedSprite2D.animation = 'back'
+		elif direction == 1:
+			$AnimatedSprite2D.animation = 'left'
+		elif direction == 2:
+			$AnimatedSprite2D.animation = 'front'
+		elif direction == 3:
+			$AnimatedSprite2D.animation = 'right'
 		
 	position += velocity * delta
 	position = position.clamp(Vector2.ZERO, screen_size)
