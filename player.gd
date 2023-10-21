@@ -17,7 +17,6 @@ func _ready():
 	screen_size.y = 650
 	$AnimatedSprite2D.play()
 	coins = 0
-	name = "player"
 	
 
 func _physics_process(delta):
