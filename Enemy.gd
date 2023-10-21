@@ -40,8 +40,7 @@ func handle_collision():
 		queue_free()
 		hit.emit()
 
-
-func _on_player_action():
+func _on_player_ene_move():
 	# handle player movement and rotation
 	
 	if list[0] == 2: 
@@ -93,5 +92,3 @@ func _on_player_action():
 	enemy_move_toggle = false
 	enemy_turn_left_toggle = false
 	enemy_turn_right_toggle = false
-
-
