@@ -4,6 +4,7 @@ const SPEED = 400
 const RADIANS = PI /2
 var screen_size
 
+
 #used to map rotaion
 var direction = 0
 
@@ -15,6 +16,7 @@ func _physics_process(delta):
 	
 	var velocity = Vector2.ZERO # The player's movement vector.
 	
+
 	# handle player movement and rotation
 	if Input.is_action_just_pressed("forward"): 
 		if direction == 0:
@@ -37,11 +39,7 @@ func _physics_process(delta):
 		if direction == 0:
 			direction = 3
 		else:
-			direction -=1
-
-	if velocity.length() > 0:
-		velocity = velocity.normalized() * SPEED
-		
+			direction -=1		
 		
 	position += velocity * delta
 	position = position.clamp(Vector2.ZERO, screen_size)
