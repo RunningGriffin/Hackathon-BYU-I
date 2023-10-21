@@ -1,4 +1,4 @@
-extends CharacterBody2D
+extends Area2D
 
 const SPEED = 400
 const RADIANS = PI /2
@@ -9,11 +9,12 @@ var action_turn_left_toggle = false
 var action_turn_right_toggle = false
 
 #used to map rotaion
-var direction = 0
+var direction = 3
 
 
 func _ready():
 	screen_size = get_viewport_rect().size
+	$AnimatedSprite2D.play()
 
 func _physics_process(delta):
 	
@@ -26,26 +27,45 @@ func _physics_process(delta):
 	# handle player movement and rotation
 	if action_move_toggle: 
 		if direction == 0:
+			$AnimatedSprite2D.animation = 'back'
 			position.y -= 100
 		elif direction == 1:
+			$AnimatedSprite2D.animation = 'left'
 			position.x -= 100
 		elif direction == 2:
+			$AnimatedSprite2D.animation = 'front'
 			position.y += 100
 		elif direction == 3:
+			$AnimatedSprite2D.animation = 'right'
 			position.x += 100
 			
 	if action_turn_left_toggle:
-		rotation -= RADIANS
 		if direction == 3:
 			direction = 0
 		else:
 			direction +=1
+		if direction == 0:
+			$AnimatedSprite2D.animation = 'back'
+		elif direction == 1:
+			$AnimatedSprite2D.animation = 'left'
+		elif direction == 2:
+			$AnimatedSprite2D.animation = 'front'
+		elif direction == 3:
+			$AnimatedSprite2D.animation = 'right'
+			
 	if action_turn_right_toggle:
-		rotation += RADIANS
 		if direction == 0:
 			direction = 3
 		else:
-			direction -=1		
+			direction -=1
+		if direction == 0:
+			$AnimatedSprite2D.animation = 'back'
+		elif direction == 1:
+			$AnimatedSprite2D.animation = 'left'
+		elif direction == 2:
+			$AnimatedSprite2D.animation = 'front'
+		elif direction == 3:
+			$AnimatedSprite2D.animation = 'right'
 		
 	position += velocity * delta
 	position = position.clamp(Vector2.ZERO, screen_size)
