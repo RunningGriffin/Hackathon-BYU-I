@@ -24,10 +24,36 @@ func _ready():
 func _process(delta):
 	var velocity = Vector2.ZERO # The player's movement vector.
 	
-	if get_owner().action_move_toggle:
-		handle_move(delta)
+	position = position.clamp(Vector2.ZERO, screen_size)
 	
-		# handle player movement and rotation
+	handle_collision()
+	
+	enemy_move_toggle = false
+	enemy_turn_left_toggle = false
+	enemy_turn_right_toggle = false
+		
+func handle_move():
+	random.randomize()
+	var choice = random.randi_range(1, 4)
+	
+	if choice % 2 == 0:
+		enemy_move_toggle = true
+	elif choice == 1:
+		enemy_turn_left_toggle = true
+	elif choice == 3:
+		enemy_turn_right_toggle = true
+	
+func handle_collision():
+	if position.y + 50 >= player.position.y and position.y - 50 <= player.position.y and position.x + 50 >= player.position.x and position.x - 50 <= player.position.x:
+		print('dead')
+		queue_free()
+		hit.emit()
+
+
+
+func _on_player_action():
+	handle_move()
+	# handle player movement and rotation
 	if enemy_move_toggle: 
 		if direction == 0:
 #			$AnimatedSprite2D.animation = 'back'
@@ -70,29 +96,7 @@ func _process(delta):
 #		elif direction == 3:
 #			$AnimatedSprite2D.animation = 'right'
 		
-	position += velocity * delta
-	position = position.clamp(Vector2.ZERO, screen_size)
-	
-	handle_collision()
 	
 	enemy_move_toggle = false
 	enemy_turn_left_toggle = false
 	enemy_turn_right_toggle = false
-		
-func handle_move(delta):
-	random.randomize()
-	var choice = random.randi_range(1, 4)
-	
-	if choice % 2 == 0:
-		enemy_move_toggle = true
-	elif choice == 1:
-		enemy_turn_left_toggle = true
-	elif choice == 3:
-		enemy_turn_right_toggle = true
-	
-func handle_collision():
-	if position.y + 50 >= player.position.y and position.y - 50 <= player.position.y and position.x + 50 >= player.position.x and position.x - 50 <= player.position.x:
-		print('dead')
-		queue_free()
-		hit.emit()
-
