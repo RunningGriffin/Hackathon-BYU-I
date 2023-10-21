@@ -1,26 +1,24 @@
-extends ItemList
+extends Node2D
 
-
-var move = false
-var action_turn_left_toggle = false
-var action_turn_right_toggle = false
+signal player_action # This one is emitted for every action, so enemies can react
+signal player_move
+signal player_turn_left
+signal player_turn_right
 
 
 func _on_item_activated(index):
+	player_action.emit()
+		
 	match index:
 		0: # Move
-			move = true
-			
+			player_move.emit()
 			
 		1: # Turn Left
-			action_turn_left_toggle = true
-			
+			player_turn_left.emit()
 			
 		2: # Turn Right
-			action_turn_right_toggle = true
+			player_turn_right.emit()
 
 func _process(_delta):
-	move = false
-	action_turn_left_toggle = false
-	action_turn_right_toggle = false
+	pass
 
