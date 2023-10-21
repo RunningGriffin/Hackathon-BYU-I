@@ -15,6 +15,7 @@ script = ExtResource("1_ps516")
 position = Vector2(64, 64)
 
 [node name="TileMap" parent="." instance=ExtResource("2_bvqsw")]
+tile_set = null
 
 [node name="actionsInterface" parent="." instance=ExtResource("4_8s40o")]
 
