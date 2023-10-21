@@ -1,13 +1,23 @@
-[gd_scene load_steps=3 format=3 uid="uid://cq8cfj40nspax"]
+[gd_scene load_steps=5 format=3 uid="uid://cq8cfj40nspax"]
 
 [ext_resource type="Script" path="res://Tiles/wall.gd" id="1_7vvd1"]
 
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_u1k3v"]
+
 [sub_resource type="CircleShape2D" id="CircleShape2D_aph2k"]
+
+[sub_resource type="ImageTexture" id="ImageTexture_3fum0"]
 
 [node name="wall" type="Node2D"]
 script = ExtResource("1_7vvd1")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
+physics_material_override = SubResource("PhysicsMaterial_u1k3v")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
 shape = SubResource("CircleShape2D_aph2k")
+one_way_collision_margin = 10.0
+debug_color = Color(0.443137, 0.462745, 0.972549, 0.419608)
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D/CollisionShape2D"]
+texture = SubResource("ImageTexture_3fum0")
