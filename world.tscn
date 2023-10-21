@@ -3,7 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://dcbkq2ko4hnrq" path="res://player.tscn" id="1_8hw71"]
 [ext_resource type="Script" path="res://world.gd" id="1_ps516"]
 [ext_resource type="PackedScene" uid="uid://clbtedsudd8l4" path="res://tile_map.tscn" id="2_bvqsw"]
-[ext_resource type="PackedScene" uid="uid://b2wbfvmaci44u" path="res://actionsInterface.tscn" id="4_8s40o"]
+[ext_resource type="PackedScene" uid="uid://dfbh1fpc80s2l" path="res://actionsInterface.tscn" id="4_8s40o"]
 [ext_resource type="PackedScene" path="res://enemy.tscn" id="5_c2q0w"]
 [ext_resource type="PackedScene" uid="uid://dgnqrrlbb15u3" path="res://coin.tscn" id="6_cpruv"]
 [ext_resource type="PackedScene" path="res://gameover.tscn" id="6_tnsj5"]
@@ -23,6 +23,9 @@ position = Vector2(846, 300)
 
 [node name="Coin" parent="TileMap" instance=ExtResource("6_cpruv")]
 position = Vector2(500, 100)
+
+[node name="Coin2" parent="TileMap" instance=ExtResource("6_cpruv")]
+position = Vector2(100, 400)
 
 [node name="GameOverScreen" parent="." instance=ExtResource("6_tnsj5")]
 
