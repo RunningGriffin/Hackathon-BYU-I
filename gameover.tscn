@@ -1,0 +1,99 @@
+[gd_scene load_steps=6 format=3 uid="uid://dujtvgf5x7fa4"]
+
+[ext_resource type="FontFile" uid="uid://cwcmqnkjbp28c" path="res://font/Godot-Fontpack-master/fonts/architect-s-daughter/ArchitectsDaughter.ttf" id="1_hsrmw"]
+[ext_resource type="Script" path="res://gameover.gd" id="1_o0gqf"]
+[ext_resource type="FontFile" uid="uid://0aoee57resw3" path="res://font/Godot-Fontpack-master/fonts/droid-sans/DroidSans-Bold.ttf" id="3_a6f3q"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_puij2"]
+bg_color = Color(0.72549, 0.576471, 0.529412, 1)
+corner_radius_top_left = 50
+corner_radius_top_right = 50
+corner_radius_bottom_right = 50
+corner_radius_bottom_left = 50
+
+[sub_resource type="LabelSettings" id="LabelSettings_hp7h4"]
+font = ExtResource("1_hsrmw")
+font_size = 96
+
+[node name="GameOverScreen" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_o0gqf")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.490196)
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -345.0
+offset_top = -218.0
+offset_right = 352.0
+offset_bottom = 207.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_puij2")
+
+[node name="Label" type="Label" parent="Panel"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -311.5
+offset_top = 8.0
+offset_right = 311.5
+offset_bottom = 177.0
+grow_horizontal = 2
+text = "Game Over"
+label_settings = SubResource("LabelSettings_hp7h4")
+
+[node name="RestartButton" type="Button" parent="Panel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -159.5
+offset_top = 62.5
+offset_right = 157.5
+offset_bottom = 136.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("3_a6f3q")
+theme_override_font_sizes/font_size = 56
+text = "Retry"
+
+[node name="MenuButton" type="Button" parent="Panel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -4.0
+offset_top = -4.0
+offset_right = 4.0
+offset_bottom = 4.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("3_a6f3q")
+theme_override_font_sizes/font_size = 40
+text = "Main Menu"
+
+[connection signal="pressed" from="Panel/RestartButton" to="." method="_on_restart_button_pressed"]
+[connection signal="pressed" from="Panel/MenuButton" to="." method="_on_menu_button_pressed"]
