@@ -6,6 +6,7 @@ signal player_turn_left
 signal player_turn_right
 
 signal activate_moves
+signal remove_action
 
 
 func _on_item_activated(index):
@@ -37,3 +38,9 @@ func _on_player_share_action_queue(actionQueue, adding):
 		$QueueItemList.remove_item(0)	
 	
 		
+
+
+func _on_queue_item_list_item_activated(index):
+	remove_action.emit(index)
+	$QueueItemList.remove_item(index)
+	

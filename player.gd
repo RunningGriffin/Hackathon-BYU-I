@@ -147,3 +147,7 @@ func _on_enemy_2_hit():
 	print("player received kill signal")
 	alive = false
 	
+
+
+func _on_actions_interface_remove_action(index):
+	actionQueue.remove_at(index)
