@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://possibleActionsItemList.gd" id="1_tf75w"]
 
-[node name="Node2D" type="Node2D"]
+[node name="actionsInterface" type="Node2D"]
 
 [node name="ActionQueueWindow" type="Window" parent="."]
 title = "Action Queue"
@@ -13,12 +13,13 @@ unresizable = true
 
 [node name="possibleActionsItemList" type="ItemList" parent="."]
 offset_left = 3.0
-offset_top = 443.0
-offset_right = 313.0
-offset_bottom = 643.0
-item_count = 2
+offset_top = 498.0
+offset_right = 203.0
+offset_bottom = 648.0
+item_count = 3
 item_0/text = "Move"
-item_1/text = "Turn"
+item_1/text = "Turn Left"
+item_2/text = "Turn Right"
 script = ExtResource("1_tf75w")
 
 [connection signal="item_activated" from="possibleActionsItemList" to="possibleActionsItemList" method="_on_item_activated"]
