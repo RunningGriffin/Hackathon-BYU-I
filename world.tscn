@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://cpskj7ryuoaeq"]
+[gd_scene load_steps=5 format=3 uid="uid://k2u0dlcj8uac"]
 
 [ext_resource type="PackedScene" uid="uid://dcbkq2ko4hnrq" path="res://player.tscn" id="1_8hw71"]
 [ext_resource type="Script" path="res://world.gd" id="1_ps516"]
-[ext_resource type="PackedScene" uid="uid://clbtedsudd8l4" path="res://tile_map.tscn" id="2_bvqsw"]
+[ext_resource type="PackedScene" path="res://tile_map.tscn" id="2_bvqsw"]
+[ext_resource type="PackedScene" uid="uid://cq8cfj40nspax" path="res://Level/Tiles/wall.tscn" id="4_0mjnd"]
 
 [node name="World" type="Node"]
 script = ExtResource("1_ps516")
@@ -11,3 +12,5 @@ script = ExtResource("1_ps516")
 position = Vector2(64, 64)
 
 [node name="TileMap" parent="." instance=ExtResource("2_bvqsw")]
+
+[node name="wall" parent="." instance=ExtResource("4_0mjnd")]

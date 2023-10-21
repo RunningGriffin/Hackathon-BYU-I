@@ -1,0 +1,24 @@
+[gd_scene load_steps=2 format=3 uid="uid://d0sc5v6cmnqif"]
+
+[sub_resource type="GDScript" id="GDScript_cqtvg"]
+script/source = "extends Node2D
+
+# Class for interactable objects such as switches and doors
+class_name object
+
+# Called when the node enters the scene tree for the first time.
+func _ready():
+	pass # Replace with function body.
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta):
+	pass
+"
+
+[node name="object" type="Node2D"]
+script = SubResource("GDScript_cqtvg")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
