@@ -12,6 +12,8 @@ var random = RandomNumberGenerator.new()
 
 var screen_size
 
+var list : Array = [2,2,3,2,2,1,2,1,2,2,2,2,1,2,1,2,3,2,2,1,2,1,2,2,3,2,2,1,2,1,2,2,2,2,1,2,1,2,3,2,2,1,2,1,2,2,3,2,2,1,2,1,2,2,2,2,1,2,1,2,3,2,2,1,2,1]
+
 @onready var player = $"../Player"
 
 # Called when the node enters the scene tree for the first time.
@@ -53,7 +55,8 @@ func handle_collision():
 func _on_player_action():
 	handle_move()
 	# handle player movement and rotation
-	if enemy_move_toggle: 
+	
+	if list[0] == 2: 
 		if direction == 0:
 			$AnimatedSprite2D.animation = 'back'
 			position.y -= 100
@@ -66,8 +69,9 @@ func _on_player_action():
 		elif direction == 3:
 			$AnimatedSprite2D.animation = 'right'
 			position.x += 100
-			
-	if enemy_turn_left_toggle:
+	
+	#left
+	if list[0] == 3:
 		if direction == 3:
 			direction = 0
 		else:
@@ -80,8 +84,9 @@ func _on_player_action():
 			$AnimatedSprite2D.animation = 'front'
 		elif direction == 3:
 			$AnimatedSprite2D.animation = 'right'
-			
-	if enemy_turn_right_toggle:
+	
+	#right
+	if list[0] == 1:
 		if direction == 0:
 			direction = 3
 		else:
@@ -94,7 +99,8 @@ func _on_player_action():
 			$AnimatedSprite2D.animation = 'front'
 		elif direction == 3:
 			$AnimatedSprite2D.animation = 'right'
-		
+	
+	list.pop_front()
 	
 	enemy_move_toggle = false
 	enemy_turn_left_toggle = false
