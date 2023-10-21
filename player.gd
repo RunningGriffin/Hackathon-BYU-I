@@ -6,6 +6,7 @@ var screen_size: Vector2
 var coins: int
 var turns: int
 signal win
+signal ene_move
 
 var action_move_toggle = false
 var action_turn_left_toggle = false
@@ -96,6 +97,7 @@ func _on_player_turn_right():
 		
 func _on_activate_moves():
 	while len(actionQueue) != 0:
+		ene_move.emit()
 		var current_action = actionQueue.pop_front()
 		print(current_action)
 		

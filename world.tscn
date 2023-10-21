@@ -6,12 +6,10 @@
 [ext_resource type="Script" path="res://world.gd" id="1_ps516"]
 [ext_resource type="PackedScene" uid="uid://clbtedsudd8l4" path="res://tile_map.tscn" id="2_bvqsw"]
 [ext_resource type="PackedScene" uid="uid://dfbh1fpc80s2l" path="res://actionsInterface.tscn" id="4_8s40o"]
-
 [ext_resource type="PackedScene" uid="uid://ofsykiave038" path="res://enemy.tscn" id="5_c2q0w"]
 [ext_resource type="PackedScene" uid="uid://c85tgs1l0pydn" path="res://coin.tscn" id="6_cpruv"]
 [ext_resource type="PackedScene" uid="uid://dujtvgf5x7fa4" path="res://gameover.tscn" id="6_tnsj5"]
 [ext_resource type="Script" path="res://enemy2.gd" id="7_xsxmy"]
-
 
 [node name="World" type="Node"]
 script = ExtResource("1_ps516")
@@ -48,15 +46,18 @@ script = ExtResource("7_xsxmy")
 [node name="GameOverScreen" parent="." instance=ExtResource("6_tnsj5")]
 
 
+[connection signal="ene_move" from="TileMap/Player" to="TileMap/Enemy" method="_on_player_ene_move"]
+[connection signal="ene_move" from="TileMap/Player" to="TileMap/Enemy2" method="_on_player_ene_move"]
+
 [node name="victoryScreen" parent="." instance=ExtResource("8_hin57")]
 
 
 
 [connection signal="activate_moves" from="TileMap/actionsInterface" to="TileMap/Player" method="_on_activate_moves"]
 
+
 [connection signal="win" from="TileMap/Player" to="." method="_on_player_win"]
-[connection signal="player_action" from="TileMap/actionsInterface" to="TileMap/Enemy" method="_on_player_action"]
-[connection signal="player_action" from="TileMap/actionsInterface" to="TileMap/Enemy2" method="_on_actions_interface_player_action"]
+[connection signal="activate_moves" from="TileMap/actionsInterface" to="TileMap/Player" method="_on_activate_moves"]
 [connection signal="player_move" from="TileMap/actionsInterface" to="TileMap/Player" method="_on_player_move"]
 [connection signal="player_turn_left" from="TileMap/actionsInterface" to="TileMap/Player" method="_on_player_turn_left"]
 [connection signal="player_turn_right" from="TileMap/actionsInterface" to="TileMap/Player" method="_on_player_turn_right"]
