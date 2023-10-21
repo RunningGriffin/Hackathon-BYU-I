@@ -67,8 +67,8 @@ func _on_player_turn_right():
 		$AnimatedSprite2D.animation = 'front'
 	elif direction == 3:
 		$AnimatedSprite2D.animation = 'right'
-    
-    
+	
+	
 func getCoin():
 	coins += 1
 
