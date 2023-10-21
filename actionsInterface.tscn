@@ -3,6 +3,7 @@
 [ext_resource type="Script" path="res://possibleActionsItemList.gd" id="1_tf75w"]
 
 [node name="actionsInterface" type="Node2D"]
+script = ExtResource("1_tf75w")
 
 [node name="ActionQueueWindow" type="Window" parent="."]
 title = "Action Queue"
@@ -20,6 +21,5 @@ item_count = 3
 item_0/text = "Move"
 item_1/text = "Turn Left"
 item_2/text = "Turn Right"
-script = ExtResource("1_tf75w")
 
-[connection signal="item_activated" from="possibleActionsItemList" to="possibleActionsItemList" method="_on_item_activated"]
+[connection signal="item_activated" from="possibleActionsItemList" to="." method="_on_item_activated"]
