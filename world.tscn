@@ -1,6 +1,4 @@
-
 [gd_scene load_steps=9 format=3 uid="uid://cpskj7ryuoaeq"]
-
 
 [ext_resource type="PackedScene" uid="uid://dcbkq2ko4hnrq" path="res://player.tscn" id="1_8hw71"]
 [ext_resource type="Script" path="res://world.gd" id="1_ps516"]
@@ -48,12 +46,7 @@ script = ExtResource("7_xsxmy")
 [node name="GameOverScreen" parent="." instance=ExtResource("6_tnsj5")]
 
 
-[node name="victoryScreen" parent="." instance=ExtResource("8_hin57")]
-
-
-
 [connection signal="activate_moves" from="TileMap/actionsInterface" to="TileMap/Player" method="_on_activate_moves"]
-
 [connection signal="win" from="TileMap/Player" to="." method="_on_player_win"]
 [connection signal="player_action" from="TileMap/actionsInterface" to="TileMap/Enemy" method="_on_player_action"]
 [connection signal="player_action" from="TileMap/actionsInterface" to="TileMap/Enemy2" method="_on_actions_interface_player_action"]
