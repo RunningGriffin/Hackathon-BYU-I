@@ -5,6 +5,7 @@ const RADIANS = PI /2
 var screen_size: Vector2
 var coins: int
 var alive = true
+var foundArnold = false
 signal win
 signal enemy_move
 signal shareActionQueue
@@ -91,6 +92,7 @@ func getCoin():
 
 func getArnold():
 	win.emit()
+	foundArnold = true
 
 
 func _on_player_move():
@@ -109,7 +111,7 @@ func _on_player_turn_right():
 		
 		
 func _on_activate_moves():
-	while len(actionQueue) != 0 and alive == true:
+	while len(actionQueue) != 0 and alive == true and foundArnold == false:
 		enemy_move.emit()
 		var current_action = actionQueue.pop_front()
 		print(current_action)
